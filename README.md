@@ -9,12 +9,12 @@ Using:
 include smarple.to.js
 include smarple.to.{corresponding-culture-name}.js
 
-(123.456).to('{pattern}');
+(123.456).to('{pattern}');  
 new Date().to('{pattern}');
 
 Supported Number patterns:
-"." - decimal delimiter
-"," - group delimiter
-"0" - fixed decimals or leading zero placeholder
-"#" - max decimals placehorder
+"." - decimal delimiter  
+"," - group delimiter  
+"0" - fixed decimals or leading zero placeholder  
+"#" - max decimals placehorder  
 
