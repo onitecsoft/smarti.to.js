@@ -15,6 +15,6 @@ new Date().to('{pattern}');
 Supported Number patterns:
 "." - decimal delimiter
 "," - group delimiter
-"0" - fixed decimal or leading zero placeholder
-"#" - max decimal placehorder
+"0" - fixed decimals or leading zero placeholder
+"#" - max decimals placehorder
 
