@@ -38,7 +38,9 @@ Supported Date patterns:
 
 Custom patterns defined in smarple.to.{culture-name}.js file
 
-Examples (smarple.to.et-EE.js):  
+Examples (smarple.to.et-EE.js):
+
+```js
 (1111.2222).to(',.00')        //output: 1 111,22  
 (1111.2222).to('n2')          //output: 1 111,22  
 (1111).to('00000,')           //output: 01 111  
@@ -48,3 +50,4 @@ Examples (smarple.to.et-EE.js):
 new Date('2015-1-1').to('d')                //output: 1.01.2015  
 new Date('2015-1-1').to('dd.MM.yy')         //output: 01.01.15  
 new Date('2015-1-1 10:30:25').to('hh:mm')   //output: 10:30
+```
