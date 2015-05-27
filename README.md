@@ -8,19 +8,21 @@ Example file - smarple.to.et-EE.js
 Using:  
 include smarple.to.js  
 include smarple.to.{corresponding-culture-name}.js
-
 ```js
 var number = (123.456).to('{pattern}');  
 var date = new Date().to('{pattern}');
 ```
 
-Supported Number patterns:  
+Supported Number patterns:
+```
 "." - decimal delimiter  
 "," - group delimiter  
 "0" - minimum (fixed) decimals or leading zero placeholder  
 "#" - maximum decimals placehorder
+```
 
-Supported Date patterns:  
+Supported Date patterns:
+```
 "d"    - day of the month  
 "dd"   - day of the month (2 digits)  
 "M"    - month  
@@ -35,11 +37,11 @@ Supported Date patterns:
 "ss"   - seconds (2 digits)  
 "t"    - A/P  
 "tt"   - AM/PM
+```
 
 Custom patterns defined in smarple.to.{culture-name}.js file
 
 Examples (smarple.to.et-EE.js):
-
 ```js
 (1111.2222).to(',.00')        //output: 1 111,22  
 (1111.2222).to('n2')          //output: 1 111,22  
