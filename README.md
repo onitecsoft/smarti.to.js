@@ -9,8 +9,10 @@ Using:
 include smarple.to.js  
 include smarple.to.{corresponding-culture-name}.js
 
+```js
 var number = (123.456).to('{pattern}');  
 var date = new Date().to('{pattern}');
+```
 
 Supported Number patterns:  
 "." - decimal delimiter  
