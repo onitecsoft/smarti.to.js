@@ -3,7 +3,7 @@
 JavaScript Date and Number localized formatter
 
 User should create separate smarple.to.{culture-name}.js file for every culture and configure it.  
-Example file - smarple.to.et-EE.js
+Example files - smarple.to.et-EE.js, smarple.to.en-US.js
 
 Using:  
 include smarple.to.js  
@@ -27,6 +27,8 @@ Supported Date patterns:
 "dd"   - day of the month (2 digits)  
 "M"    - month  
 "MM"   - month (2 digits)  
+"MMM"  - month name of "MMM" array defined in culture configuration  
+"MMMM" - month name of "MMMM" array defined in culture configuration  
 "yy"   - year (2 digits)  
 "yyyy" - year (4 digits)  
 "h"    - hour  
@@ -36,7 +38,10 @@ Supported Date patterns:
 "s"    - seconds  
 "ss"   - seconds (2 digits)  
 "t"    - A/P  
-"tt"   - AM/PM
+"tt"   - AM/PM  
+"a"    - week day name of "a" array defined in culture configuration  
+"aa"   - week day name of "aa" array defined in culture configuration  
+"aaa"  - week day name of "aaa" array defined in culture configuration  
 ```
 
 Custom patterns can be defined in smarple.to.{culture-name}.js file
