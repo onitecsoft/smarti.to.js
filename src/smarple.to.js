@@ -22,13 +22,15 @@ Number.prototype.to = function (format) {
 Date.prototype.to = function (format) {
 	var value = this;
 	var h = this.getHours();
-	var ampm = Date.culture.ampm ? (h > 12 ? Date.culture.am : Date.culture.pm) : '';
-	h = Date.culture.ampm && h > 12 ? h - 12 : h;
+	var ampm = Date.culture.ampm ? (h > 11 ? Date.culture.pm : Date.culture.am) : '';
+	h = Date.culture.ampm ? (h > 12 ? h - 12 : (h == 0 ? 12 : h)) : h;
 
 	format = Date.culture.patterns[format] || format;
-	format = format.replace(/dd|d|MM|M|yyyy|yy|hh|h|mm|m|ss|s|tt|t/g, function (s) {
+	format = format.replace(/dd|d|MMMM|MMM|MM|M|yyyy|yy|hh|h|mm|m|ss|s|tt|t|aaa|aa|a/g, function (s) {
 		if (s == 'dd') return value.getDate().to('00');
 		else if (s == 'd') return value.getDate();
+		else if (s == 'MMMM') return Date.culture.MMMM[value.getMonth() + 1];
+		else if (s == 'MMM') return Date.culture.MMM[value.getMonth() + 1];
 		else if (s == 'MM') return (value.getMonth() + 1).to('00');
 		else if (s == 'M') return value.getMonth() + 1;
 		else if (s == 'yyyy') return value.getFullYear();
@@ -41,6 +43,9 @@ Date.prototype.to = function (format) {
 		else if (s == 's') return value.getSeconds();
 		else if (s == 'tt') return ampm;
 		else if (s == 't') return ampm.substr(0, 1);
+		else if (s == 'aaa') return Date.culture.aaa[value.getDay()];
+		else if (s == 'aa') return Date.culture.aa[value.getDay()];
+		else if (s == 'a') return Date.culture.a[value.getDay()];
 	});
 
 	return format;
