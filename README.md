@@ -39,7 +39,7 @@ Supported Date patterns:
 "tt"   - AM/PM
 ```
 
-Custom patterns defined in smarple.to.{culture-name}.js file
+Custom patterns can be defined in smarple.to.{culture-name}.js file
 
 Examples (smarple.to.et-EE.js):
 ```js
