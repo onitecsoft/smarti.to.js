@@ -13,11 +13,16 @@ Number.culture = {
 
 Date.culture = {
 	ampm: false,
-	am: 'AM',
-	pm: 'PM',
+	am: '',
+	pm: '',
 	patterns: {
 		d: 'd.MM.yyyy',
 		t: 'hh:mm:ss',
 		dt: 'd.MM.yyyy hh:mm:ss'
-	}
+	},
+	a: ['P', 'E', 'T', 'K', 'N', 'R', 'L'],
+	aa: ['püh', 'esm', 'tei', 'kol', 'nel', 'ree', 'lau'],
+	aaa: ['pühapäev', 'esmaspäev', 'teisipäev', 'kolmapäev', 'neljapäev', 'reede', 'laupäev'],
+	MMM: ['jaan', 'veebr', 'märts', 'apr', 'mai', 'juuni', 'juuli', 'aug', 'sept', 'okt', 'nov', 'dets'],
+	MMMM: ['jaanuar', 'veebruar', 'märts', 'aprill', 'mai', 'juuni', 'juuli', 'august', 'september', 'oktoober', 'november', 'detsember']
 }
