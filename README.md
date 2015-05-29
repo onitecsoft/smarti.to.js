@@ -1,6 +1,7 @@
 # smarple.to.js
 
-JavaScript Date and Number localized formatter
+JavaScript Number, Date and JSON Date localized formatter  
+(Converting JSON Date to JavaScript Date ignores timezone, so it will be the same value as defined in JSON)
 
 User should create separate smarple.to.{culture-name}.js file for every culture and configure it.  
 Example files: smarple.to.et-EE.js, smarple.to.en-US.js
@@ -11,6 +12,8 @@ include smarple.to.{corresponding-culture-name}.js
 ```js
 var number = (123.456).to('{pattern}');  
 var date = new Date().to('{pattern}');
+var date = "2015-01-01T10:11:12.123Z".to('{pattern}');
+var date = "/Date('1432883671013')/".to('{pattern}');
 ```
 
 Supported Number patterns:
