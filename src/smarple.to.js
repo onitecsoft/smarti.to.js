@@ -50,3 +50,20 @@ Date.prototype.to = function (format) {
 
 	return format;
 };
+
+String.prototype.to = function (format) {
+	if (this.indexOf('/Date(') == 0) {
+		var value = new Date(parseInt(this.substr(6)));
+		value = new Date(value.getTime() + value.getTimezoneOffset() * 60000);
+		return value.to(format);
+	}
+	else {
+		var utc = this.match(/^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}[\.\d]*/);
+		if (utc != null) {
+			var value = new Date(utc[0] + "Z");
+			value = new Date(value.getTime() + value.getTimezoneOffset() * 60000);
+			return value.to(format);
+		}
+	}
+	return this;
+}
