@@ -62,5 +62,5 @@ new Date('2015-1-1').to('d')                //output: 1.01.2015
 new Date('2015-1-1').to('dd.MM.yy')         //output: 01.01.15  
 new Date('2015-1-1 10:30:25').to('hh:mm')   //output: 10:30
 
-smarple.format('{0:n2} + {1:n2} = {2:n2}', 1, 2, 3)   //output: 1.00 + 2.00 = 3.00
+smarple.format('{0:n2} + {1:n2} = {2:n2}', 1, 2, 3)   //output: 1,00 + 2,00 = 3,00
 ```
