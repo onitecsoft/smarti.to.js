@@ -1,3 +1,15 @@
+var smarple = window['smarple'] || {};
+smarple.format = function () {
+	if (arguments[0] != null) {
+		var args = arguments;
+		return arguments[0].replace(/\{(\d+):?([^\}]*)\}|^[^\{\}]+$/g, function (t, i, f) {
+			i = parseInt(i || 0) + 1;
+			return args[i] != null && args[i].to != null ? args[i].to(f || t) : '';
+		});
+	}
+	else return arguments[1] || '';
+}
+
 Number.prototype.to = function (format) {
 	format = Number.culture.patterns[format] || format;
 	var parts = format.split('.');
