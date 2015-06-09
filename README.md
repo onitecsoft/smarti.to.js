@@ -14,7 +14,7 @@ var number = (123.456).to('pattern');
 var date = new Date().to('pattern');
 var date = "2015-01-01T10:11:12.123Z".to('pattern');
 var date = "/Date('1432883671013')/".to('pattern');
-var formatted_string = smarple.format('{0:pattern} some_text {1:pattern} {2:pattern}', var0, var1, var2)
+var formatted_string = smarple.format('{0:pattern} some_text {1:pattern}...', var0, var1, ...)
 ```
 
 Supported Number patterns:
