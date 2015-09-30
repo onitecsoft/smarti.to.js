@@ -1,5 +1,5 @@
-var smarple = window['smarple'] || {};
-smarple.format = function () {
+var smarti = window['smarti'] || {};
+smarti.format = function () {
 	if (arguments[0] != null) {
 		var args = arguments;
 		return arguments[0].replace(/\{(\d+):?([^\}]*)\}|^[^\{\}]+$/g, function (t, i, f) {
