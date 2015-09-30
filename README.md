@@ -1,20 +1,20 @@
-# smarple.to.js
+# smarti.to.js
 
 JavaScript Number, Date and JSON Date localized formatter  
 (Converting JSON Date to JavaScript Date ignores timezone, so it will be the same value as defined in JSON)
 
-User should create separate smarple.to.{culture-name}.js file for every culture and configure it.  
-Example files: smarple.to.et-EE.js, smarple.to.en-US.js
+User should create separate smarti.to.{culture-name}.js file for every culture and configure it.  
+Example files: smarti.to.et-EE.js, smarti.to.en-US.js
 
 Using:  
-include smarple.to.js  
-include smarple.to.{corresponding-culture-name}.js
+include smarti.to.js  
+include smarti.to.{corresponding-culture-name}.js
 ```js
 var number = (123.456).to('pattern');  
 var date = new Date().to('pattern');
 var date = "2015-01-01T10:11:12.123Z".to('pattern');
 var date = "/Date('1432883671013')/".to('pattern');
-var formatted_string = smarple.format('{0:pattern} some_text {1:pattern}...', var0, var1, ...)
+var formatted_string = smarti.format('{0:pattern} some_text {1:pattern}...', var0, var1, ...)
 ```
 
 Supported Number patterns:
@@ -48,9 +48,9 @@ Supported Date patterns:
 "aaa"  - week day from "aaa" array defined in culture configuration  
 ```
 
-Custom patterns can be defined in smarple.to.{culture-name}.js file
+Custom patterns can be defined in smarti.to.{culture-name}.js file
 
-Examples (smarple.to.et-EE.js):
+Examples (smarti.to.et-EE.js):
 ```js
 (1111.2222).to(',.00')        //output: 1 111,22  
 (1111.2222).to('n2')          //output: 1 111,22  
@@ -62,5 +62,5 @@ new Date('2015-1-1').to('d')                //output: 1.01.2015
 new Date('2015-1-1').to('dd.MM.yy')         //output: 01.01.15  
 new Date('2015-1-1 10:30:25').to('hh:mm')   //output: 10:30
 
-smarple.format('{0:n2} + {1:n2} = {2:n2}', 1, 2, 3)   //output: 1,00 + 2,00 = 3,00
+smarti.format('{0:n2} + {1:n2} = {2:n2}', 1, 2, 3)   //output: 1,00 + 2,00 = 3,00
 ```
