@@ -59,8 +59,8 @@ Date.prototype.to = function (format) {
 	format = format.replace(/dd|d|MMMM|MMM|MM|M|yyyy|yy|hh|h|mm|m|ss|s|tt|t|aaa|aa|a/g, function (s) {
 		if (s == 'dd') return value.getDate().to('00');
 		else if (s == 'd') return value.getDate();
-		else if (s == 'MMMM') return Date.culture.MMMM[value.getMonth() + 1];
-		else if (s == 'MMM') return Date.culture.MMM[value.getMonth() + 1];
+		else if (s == 'MMMM') return Date.culture.MMMM[value.getMonth()];
+		else if (s == 'MMM') return Date.culture.MMM[value.getMonth()];
 		else if (s == 'MM') return (value.getMonth() + 1).to('00');
 		else if (s == 'M') return value.getMonth() + 1;
 		else if (s == 'yyyy') return value.getFullYear();
