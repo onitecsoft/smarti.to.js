@@ -1,6 +1,6 @@
 # smarti.to.js
 
-JavaScript Number, Date and JSON Date localized formatter  
+JavaScript Number, Date and JSON Date localizable formatting  
 (Converting JSON Date to JavaScript Date ignores timezone, so it will be the same value as defined in JSON)
 
 User should create separate smarti.to.{culture-name}.js file for every culture and configure it.  
