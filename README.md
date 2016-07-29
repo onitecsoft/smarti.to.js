@@ -61,11 +61,11 @@ Custom patterns can be defined in smarti.to.{culture-name}.js file
   <tr>
     <td colspan="2">
 <pre lang="javascript">
-smarti.to(',.00', 1111.2222);		 //return: 1,111.22
+smarti.to(',.00', 1111.2222);		//return: 1,111.22
 smarti.to('n2', 1111.2222);		    //return: 1,111.22
-smarti.to('00000,', 1111);			 //return: 01,111
+smarti.to('00000,', 1111);			//return: 01,111
 smarti.to(',.00##', 1111.222222);	//return: 1,111.2222
-smarti.to(',.00##', 1111);			 //return: 1,111.00
+smarti.to(',.00##', 1111);			//return: 1,111.00
 </pre>
     </td>
   </tr>
