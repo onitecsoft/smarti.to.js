@@ -61,7 +61,11 @@ Custom patterns can be defined in smarti.to.{culture-name}.js file
   <tr>
     <td colspan="2">
 <pre lang="javascript">
-
+smarti.to(',.00', 1111.2222);		  //return: 1,111.22
+smarti.to('n2', 1111.2222);		    //return: 1,111.22
+smarti.to('00000,', 1111);			  //return: 01,111
+smarti.to(',.00##', 1111.222222);	//return: 1,111.2222
+smarti.to(',.00##', 1111);			  //return: 1,111.00
 </pre>
     </td>
   </tr>
@@ -79,12 +83,6 @@ var formatted_string = smarti.format('{0:pattern} some_text {1:pattern}...', var
 
 Examples (smarti.to.et-EE.js):
 ```js
-(1111.2222).to(',.00')        //output: 1 111,22  
-(1111.2222).to('n2')          //output: 1 111,22  
-(1111).to('00000,')           //output: 01 111  
-(1111.222222).to(',.00##')    //output: 1 111,2222  
-(1111).to(',.00##')           //output: 1 111,00
-
 new Date('2015-1-1').to('d')                //output: 1.01.2015  
 new Date('2015-1-1').to('dd.MM.yy')         //output: 01.01.15  
 new Date('2015-1-1 10:30:25').to('hh:mm')   //output: 10:30
