@@ -11,6 +11,29 @@ Example files: [smarti.to.et-EE.js](https://raw.githubusercontent.com/onitecsoft
 Using:  
 include [smarti.to.js](https://raw.githubusercontent.com/onitecsoft/smarti.to.js/master/src/smarti.to.js)   
 include smarti.to.{corresponding-culture-name}.js
+
+<b>Reference</b>
+
+<table>
+  <thead>
+    <tr>
+      <th>member</th>
+      <th>description</th>
+    </tr>
+  </thead>
+  <tr>
+    <td><b>to(pattern, argument0, argument1, ...)</b></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td colspan="2">
+<pre lang="javascript">
+
+</pre>
+    </td>
+  </tr>
+</table>
+
 ```js
 var number = (123.456).to('pattern');
 var date = new Date().to('pattern');
