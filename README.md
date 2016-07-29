@@ -5,11 +5,11 @@
 JavaScript Number, Date and JSON Date localizable formatting  
 (Converting JSON Date to JavaScript Date ignores timezone, so it will be the same value as defined in JSON)
 
-User should create separate smarti.to.{culture-name}.js file for every culture and configure it.
+User should create separate smarti.to.{culture-name}.js file for every culture and configure it.  
 Example files: [smarti.to.et-EE.js](https://raw.githubusercontent.com/onitecsoft/smarti.to.js/master/src/smarti.to.et-EE.js), [smarti.to.en-US.js](https://raw.githubusercontent.com/onitecsoft/smarti.to.js/master/src/smarti.to.en-US.js)
 
 Using:  
-include [smarti.to.js](https://raw.githubusercontent.com/onitecsoft/smarti.to.js/master/src/smarti.to.js)
+include [smarti.to.js](https://raw.githubusercontent.com/onitecsoft/smarti.to.js/master/src/smarti.to.js) 
 include smarti.to.{corresponding-culture-name}.js
 ```js
 var number = (123.456).to('pattern');
