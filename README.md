@@ -61,6 +61,7 @@ Custom patterns can be defined in smarti.to.{culture-name}.js file
   <tr>
     <td colspan="2">
 <pre lang="javascript">
+//used en-US culture
 smarti.to(',.00', 1111.2222);		//return: 1,111.22
 smarti.to('n2', 1111.2222);		    //return: 1,111.22
 smarti.to('00000,', 1111);			//return: 01,111
