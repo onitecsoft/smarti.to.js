@@ -2,7 +2,7 @@
 
 <b>For old version look [README.old.md](https://github.com/onitecsoft/smarti.to.js/blob/master/README.old.md)</b>
 
-JavaScript Number, Date and JSON Date localizable formatting  
+JavaScript Number (or its string representation), Date and JSON Date localizable formatting  
 (Converting JSON Date to JavaScript Date ignores timezone, so it will be the same value as defined in JSON)
 
 User should create separate smarti.to.{culture-name}.js file for every culture and configure it.  
