@@ -66,26 +66,11 @@ smarti.to('n2', 1111.2222);		    //return: 1,111.22
 smarti.to('00000,', 1111);			//return: 01,111
 smarti.to(',.00##', 1111.222222);	//return: 1,111.2222
 smarti.to(',.00##', 1111);			//return: 1,111.00
+smarti.to('d', '2015-01-01T10:11:12.123Z');			//return: 1/1/2015
+smarti.to('dd.MM.yy', "/Date(1432883671013)/");		//return: 29.05.15
+smarti.to('hh:mm:ss', new Date('2016-1-1 8:29:59'));	//return: 08:29:59
+smarti.to('{0:n2} + {1:n2} = {2:n2}', 1, 2, 3);		//return: 1.00 + 2.00 = 3.00
 </pre>
     </td>
   </tr>
 </table>
-
-```js
-var number = (123.456).to('pattern');
-var date = new Date().to('pattern');
-var date = "2015-01-01T10:11:12.123Z".to('pattern');
-var date = "/Date('1432883671013')/".to('pattern');
-var formatted_string = smarti.format('{0:pattern} some_text {1:pattern}...', var0, var1, ...)
-```
-
-
-
-Examples (smarti.to.et-EE.js):
-```js
-new Date('2015-1-1').to('d')                //output: 1.01.2015  
-new Date('2015-1-1').to('dd.MM.yy')         //output: 01.01.15  
-new Date('2015-1-1 10:30:25').to('hh:mm')   //output: 10:30
-
-smarti.format('{0:n2} + {1:n2} = {2:n2}', 1, 2, 3)   //output: 1,00 + 2,00 = 3,00
-```
