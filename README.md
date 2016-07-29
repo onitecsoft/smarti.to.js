@@ -2,7 +2,7 @@
 
 <b>For old version look [README.old.md](https://github.com/onitecsoft/smarti.to.js/blob/master/README.old.md)</b>
 
-JavaScript Number (or its string representation), Date and JSON Date localizable formatting  
+JavaScript Number (or its String representation), Date and JSON Date localizable formatting  
 (Converting JSON Date to JavaScript Date ignores timezone, so it will be the same value as defined in JSON)
 
 User should create separate smarti.to.{culture-name}.js file for every culture and configure it.  
@@ -56,7 +56,7 @@ Custom patterns can be defined in smarti.to.{culture-name}.js file
   </thead>
   <tr>
     <td><b>to(pattern, argument0, argument1, ...)</b></td>
-    <td></td>
+    <td>return formatted pattern with one or multiple arguments</td>
   </tr>
   <tr>
     <td colspan="2">
@@ -76,6 +76,6 @@ smarti.to('{0:n2} + {1:n2} = {2:n2}', 1, 2, 3);		    //return: 1.00 + 2.00 = 3.0
   </tr>
   <tr>
     <td><b>parse(value)</b></td>
-    <td></td>
+    <td>return parsed Number or Date value from its string or Json representation</td>
   </tr>
 </table>
