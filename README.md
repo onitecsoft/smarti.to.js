@@ -9,7 +9,7 @@ User should create separate smarti.to.{culture-name}.js file for every culture a
 Example files: <a href="https://raw.githubusercontent.com/onitecsoft/smarti.to.js/master/src/smarti.to.et-EE.js" target="_blank">smarti.to.et-EE.js</a>, <a href="https://raw.githubusercontent.com/onitecsoft/smarti.to.js/master/src/smarti.to.en-US.js" target="_blank">smarti.to.en-US.js</a>
 
 Using:  
-include smarti.to.js  
+include <a href="https://raw.githubusercontent.com/onitecsoft/smarti.to.js/master/src/smarti.to.js" target="_blank">smarti.to.js</a>  
 include smarti.to.{corresponding-culture-name}.js
 ```js
 var number = (123.456).to('pattern');  
