@@ -74,4 +74,8 @@ smarti.to('{0:n2} + {1:n2} = {2:n2}', 1, 2, 3);		    //return: 1.00 + 2.00 = 3.0
 </pre>
     </td>
   </tr>
+  <tr>
+    <td><b>parse(value)</b></td>
+    <td></td>
+  </tr>
 </table>
