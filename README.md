@@ -1,4 +1,6 @@
-# smarti.to.js
+# smarti.to.js `NEW`
+
+<b>For old version look README.old.md</b>
 
 JavaScript Number, Date and JSON Date localizable formatting  
 (Converting JSON Date to JavaScript Date ignores timezone, so it will be the same value as defined in JSON)
