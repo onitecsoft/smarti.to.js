@@ -71,12 +71,22 @@ smarti.to('d', '2015-01-01T10:11:12.123Z');           //return: 1/1/2015
 smarti.to('dd.MM.yy', "/Date(1432883671013)/");       //return: 29.05.15
 smarti.to('hh:mm:ss', new Date('2016-1-1 8:29:59'));  //return: 08:29:59
 smarti.to('{0:n2} + {1:n2} = {2:n2}', 1, 2, 3);       //return: 1.00 + 2.00 = 3.00
-smarti.to('This {0} a test', 'is');                   //return This is a test
+smarti.to('This {0} a test', 'is');                   //return: This is a test
 </pre>
     </td>
   </tr>
   <tr>
     <td><b>parse(value)</b></td>
     <td>returns parsed Number or Date value from its String or Json representation</td>
+  </tr>
+  <tr>
+    <td colspan="2">
+<pre lang="javascript">
+smarti.parse('2015-01-01T10:11:12.123Z');
+smarti.parse("/Date(1432883671013)/");
+smarti.parse('123,456');
+smarti.parse('123.456');
+</pre>
+    </td>
   </tr>
 </table>
