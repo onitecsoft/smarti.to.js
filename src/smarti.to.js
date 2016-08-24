@@ -26,7 +26,7 @@ smarti.parse = function (value) {
 	}
 	if (/^-?[0-9]+$/.test(value)) return parseInt(value);
 	if (/^-?[0-9]+(\.|,)[0-9]+$/.test(value)) return parseFloat(value.replace(',', '.'));
-	if ((m = value.match(/^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}[\.\d]*/)) != null) {
+	if ((m = value.match(/^\d{4}-\d{2}-\d{2}[T ]?(\d{2}:\d{2}:\d{2})?[\.\d]*/)) != null) {
 		var v = new Date(m[0] + "Z");
 		return new Date(v.getTime() + v.getTimezoneOffset() * 60000);
 	}
