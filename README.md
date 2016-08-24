@@ -83,6 +83,8 @@ smarti.to('This {0} a test', 'is');                   //return: This is a test
     <td colspan="2">
 <pre lang="javascript">
 smarti.parse('2015-01-01T10:11:12.123Z');
+smarti.parse('2015-01-01 10:11:12');
+smarti.parse('2015-01-01');
 smarti.parse("/Date(1432883671013)/");
 smarti.parse('123,456');
 smarti.parse('123.456');
