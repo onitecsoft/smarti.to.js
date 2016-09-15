@@ -1,4 +1,4 @@
-var smarti = window['smarti'] || {};
+var smarti = this['smarti'] || { scope: this };
 
 smarti.to = function (format) {
 	if (format) {
