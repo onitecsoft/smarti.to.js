@@ -86,8 +86,12 @@ smarti.parse('2015-01-01T10:11:12.123Z');
 smarti.parse('2015-01-01 10:11:12');
 smarti.parse('2015-01-01');
 smarti.parse("/Date(1432883671013)/");
-smarti.parse('123,456');
-smarti.parse('123.456');
+//parse numeric depend on culture
+//en-US example
+smarti.parse('123');        //return 123
+smarti.parse('123,456');    //return 123456
+smarti.parse('123.456');    //return 123.456
+smarti.parse('123,456.78'); //return 123456.78
 </pre>
     </td>
   </tr>
