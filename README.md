@@ -91,6 +91,7 @@ smarti.parse("/Date(1432883671013)/");
 smarti.parse('123');        //return 123
 smarti.parse('123,456');    //return 123456
 smarti.parse('123.456');    //return 123.456
+smarti.parse('123456.78');  //return 123456.78
 smarti.parse('123,456.78'); //return 123456.78
 </pre>
     </td>
