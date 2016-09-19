@@ -24,8 +24,15 @@ smarti.parse = function (value) {
 		var v = new Date(parseInt(value.substr(6)));
 		return new Date(v.getTime() + v.getTimezoneOffset() * 60000);
 	}
-	if (/^-?[0-9]+$/.test(value)) return parseInt(value);
-	if (/^-?[0-9]+(\.|,)[0-9]+$/.test(value)) return parseFloat(value.replace(',', '.'));
+	var nr = new RegExp('^-?[0-9\\' + smarti.culture.number.group + '\\' + smarti.culture.number.decimal + ']+$', '');
+	if (nr.test(value)) {
+		value = value.replace(smarti.culture.number.group, '');
+		if (value.indexOf(smarti.culture.number.decimal) > 0) {
+			if (smarti.culture.number.decimal != '.') value = value.replace(smarti.culture.number.decimal, '.');
+			return parseFloat(value);
+		}
+		else return parseInt(value);
+	}
 	if ((m = value.match(/^\d{4}-\d{2}-\d{2}[T ]?(\d{2}:\d{2}:\d{2})?[\.\d]*/)) != null) {
 		var v = new Date(m[0] + "Z");
 		return new Date(v.getTime() + v.getTimezoneOffset() * 60000);
