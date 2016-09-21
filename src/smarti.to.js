@@ -26,7 +26,7 @@ smarti.parse = function (value) {
 	}
 	var nr = new RegExp('^-?[0-9\\' + smarti.culture.number.group + '\\' + smarti.culture.number.decimal + ']+$', '');
 	if (nr.test(value)) {
-		value = value.replace(smarti.culture.number.group, '');
+		value = value.replace(new RegExp(smarti.culture.number.group, 'g'), '');
 		if (value.indexOf(smarti.culture.number.decimal) > 0) {
 			if (smarti.culture.number.decimal != '.') value = value.replace(smarti.culture.number.decimal, '.');
 			return parseFloat(value);
