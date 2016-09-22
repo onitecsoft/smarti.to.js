@@ -17,7 +17,8 @@ include smarti.to.{corresponding-culture-name}.js
 "." - decimal delimiter  
 "," - group delimiter  
 "0" - minimum (fixed) decimals or leading zero placeholder  
-"#" - maximum decimals placehorder
+"#" - maximum decimals placeholder
+empty decimal placeholder will output all decimals from source
 ```
 
 <b>Supported `Date` patterns:</b>
