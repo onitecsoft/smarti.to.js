@@ -52,9 +52,9 @@ smarti._to = {
 		var negative = n < 0;
 
 		if (parts.length == 2) {
-			var mind = (parts[1].match(/0/g) || []).length;
-			var maxd = mind + (parts[1].match(/#/g) || []).length;
 			var curd = (n.toString().split('.')[1] || '').length;
+			var mind = (parts[1].match(/0/g) || []).length;
+			var maxd = (mind + (parts[1].match(/#/g) || []).length) || curd;
 			decimals = curd <= mind ? mind : (curd <= maxd ? curd : maxd);
 		}
 
