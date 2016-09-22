@@ -41,7 +41,7 @@ smarti.parse = function (value) {
 
 smarti._to = {
 	ntest: function (v) {
-		return new RegExp('^-?[\\d\\' + smarti.culture.number.group + ']+(\\' + smarti.culture.number.decimal + '\\d+)?$', '').test(v);
+		return new RegExp('^-?[\\d\\' + smarti.culture.number.group + ']+\\' + smarti.culture.number.decimal + '?\\d*$', '').test(v);
 	},
 	nto: function (n, f) {
 		f = smarti.culture.number.patterns[f] || f;
