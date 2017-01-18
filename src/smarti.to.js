@@ -15,7 +15,7 @@ smarti.to = function (format) {
 			return v;
 		});
 	}
-	else return arguments[1] || '';
+	else return arguments[1] != null ? arguments[1] : '';
 }
 
 smarti.parse = function (value) {
