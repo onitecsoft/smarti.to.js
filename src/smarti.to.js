@@ -19,7 +19,8 @@ smarti.to = function (format) {
 }
 
 smarti.parse = function (value) {
-	if (typeof value != 'string' || value == '') return value;
+	if (typeof value != 'string') return value;
+	if (value == '') return null;
 	if (value.indexOf('/Date(') == 0) {
 		var v = new Date(parseInt(value.substr(6)));
 		return new Date(v.getTime() + v.getTimezoneOffset() * 60000);
